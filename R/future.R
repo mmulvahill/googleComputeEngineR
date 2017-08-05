@@ -2,7 +2,7 @@
 #' @importFrom future makeClusterPSOCK
 #' @author Henrik Bengtsson \email{henrikb@@braju.com}
 makeDockerClusterPSOCK <- function(workers, 
-                                   docker_image = "rocker/r-base", 
+                                   docker_image = "gcr.io/thesis-run/pulsatile-container", 
                                    rscript = c("docker", "run", "--net=host", docker_image, "Rscript"), 
                                    rscript_args = NULL, install_future = TRUE, ..., verbose = FALSE) {
   ## Should 'future' package be installed, if not already done?
